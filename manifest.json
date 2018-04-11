@@ -1,0 +1,16 @@
+{
+    "name": "BZBZ",
+    "version": "1.0",
+    "description": "a BZ-OJ",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": ["https://www.lydsy.com/JudgeOnline/problem.php?id=*"],
+            "js": ["js/jquery-3.3.1.min.js","js/problem.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "hello.html",
+        "default_icon": "logo.png"
+    }
+}
