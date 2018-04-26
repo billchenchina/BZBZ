@@ -25,7 +25,7 @@ function add_link() {
         var result = result.sort();
         vm.problems = result
     });*/
-  $.getJSON("https://ruanx.pw/bzojch/result.json", function(result) {
+  $.getJSON("https://aker.club/bzojch/result.json", function(result) {
     for (let i in result) {
       if (result[i][0] == problem_id_q0dsah6q4v2ex6oh4) {
         console.log(result[i]);
