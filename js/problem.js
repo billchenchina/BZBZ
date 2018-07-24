@@ -37,6 +37,13 @@ _add_link = function(problem_id) {
       }
     }
   });
+  // add download link
+  var elem = [document.querySelector('title+center'), document.querySelector('div.content+center')];
+  elem.forEach(function (el) {
+    if (el) {
+      el.innerHTML += '[<a href="https://lydsy.download/archive/' + problem_id + '.zip">Download</a>]';
+    }
+  });
 }
 
 function add_link() {
@@ -51,8 +58,6 @@ function add_link() {
       _add_link();
     }
   });
-
-
-
 }
+
 add_link();
