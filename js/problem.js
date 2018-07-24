@@ -38,8 +38,12 @@ _add_link = function(problem_id) {
     }
   });
   // add download link
-  document.querySelector('title+center').innerHTML += '[<a href="https://lydsy.download/archive/' + problem_id + '.zip">Download</a>]';
-  document.querySelector('div.content+center').innerHTML += '[<a href="https://lydsy.download/archive/' + problem_id + '.zip">Download</a>]';
+  var elem = [document.querySelector('title+center'), document.querySelector('div.content+center')];
+  elem.forEach(function (el) {
+    if (el) {
+      el.innerHTML += '[<a href="https://lydsy.download/archive/' + problem_id + '.zip">Download</a>]';
+    }
+  });
 }
 
 function add_link() {
